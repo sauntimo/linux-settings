@@ -2,7 +2,7 @@ alias _dcs="docker-compose ps"
 
 # docker logs for a container eg web, api, postgres
 function _dcl(){
-    docker-compose logs --tail=500 $1
+    docker-compose logs --tail=1000 $1
 }
 
 # docker start container

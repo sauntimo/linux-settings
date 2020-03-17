@@ -40,21 +40,34 @@ function _yds() {
     yarn dev-server
 }
 
-# run travellocal backend tests
-function test-b() {
-    _tlb
-    clear
-    pwd
-    CI=1 yarn test --grep "@api" -i
-}
+# # run travellocal backend tests
+# function test-b() {
+#     _tlb
+#     clear
+#     pwd
+#     CI=1 yarn test --grep "@api" -i
+# }
 
-#run a specified test suite
-function _yt() {
+# # run a specified test suite
+# function _yt() {
+#     if [ -z "$1" ]
+#     then
+#         echo "Exiting as no test suite was specified. Remember to quote it, especially if it begins with a '#'."
+#         return 0
+#     fi
+#     clear
+#     yarn test --grep $1
+# }
+
+# run a specified backend test file
+function _ytb() {
     if [ -z "$1" ]
     then
         echo "Exiting as no test suite was specified. Remember to quote it, especially if it begins with a '#'."
         return 0
     fi
     clear
-    yarn test --grep $1
+    printf "Attempting to run tests matching this regex: .*$1.*\.test\.ts$"
+    _tlb
+    yarn test --testRegex ".*$1.*\.test\.ts$"
 }

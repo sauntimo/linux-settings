@@ -23,7 +23,9 @@ function getDate {
 figlet $(date "+%A")
 printf "\nHello $USER, it's $(getDate), let's write some code." 
 _check_yarn
-pwd
+
+printf "PRs currently awaiting review:"
+gh pr list --label "needs reviewer"
 printf "\n"
 git status
 printf "\n"

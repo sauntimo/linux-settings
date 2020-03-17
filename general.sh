@@ -3,11 +3,12 @@ alias _eb="exec bash"
 alias l="ls -halt"
 
 # TL navigation
-alias _tl="cd /mnt/c/Users/Tim/code/travellocal"
-alias _tlf="cd /mnt/c/Users/Tim/code/travellocal/frontend"
-alias _tlb="cd /mnt/c/Users/Tim/code/travellocal/backend"
-alias _in="cd /mnt/c/Users/Tim/code/infrastructure"
-
+alias _tl="cd ~/code/travellocal"
+alias _tlf="cd ~/code/travellocal/frontend"
+alias _tlb="cd ~/code/travellocal/backend"
+alias _in="cd ~/code/infrastructure"
+alias _data="cd ~/coce/data"
+alias _tap="cd ~/code/tap"
 
 export HISTTIMEFORMAT="%d/%m/%y %T "
 

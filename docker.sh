@@ -88,3 +88,9 @@ function _dchr {
 function _dpa {
     docker images prune -a
 }
+
+# rebuild emailer
+function _dre {
+    (_tl && cd services/emailer && yarn install && yarn build)
+    (_tl && docker-compose up -d --build emailer)
+}

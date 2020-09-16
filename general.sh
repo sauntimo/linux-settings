@@ -41,6 +41,7 @@ _shortcuts(){
     _print_item "gtcon" "track remote branch locally by issue number"
     _print_item "afar" "ack find and replace"
     _print_item "_cwpc" "clear webpack cache"
+    _print_item "_updateGithubCli [x.x.x]" "Update Github CLI"
 
     _print_heading "Postgres"
     _print_item "_pgl" "log in to dev"

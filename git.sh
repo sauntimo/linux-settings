@@ -132,3 +132,13 @@ function gl {
             prev_time="$time"
         done
 }
+
+# update github cli
+# @param version string x.x.x
+_updateGithubCli(){
+    (
+        cd ~ && \
+        wget https://github.com/cli/cli/releases/download/v"$1"/gh_"$1"_linux_amd64.deb && \
+        sudo apt install git && sudo dpkg -i gh_"$1"_linux_amd64.deb
+    )
+}

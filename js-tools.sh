@@ -28,16 +28,7 @@ function _yf() {
     _tlf
     yarn install
     clear
-    yarn dev-client
-    printf '\n\n\Have you run yarn dev-server recently? maybe you should\n\n'
-}
-
-# run fontend server rebuild
-function _yds() {
-    _tlf
-    yarn install
-    clear
-    yarn dev-server
+    yarn dev
 }
 
 # # run travellocal backend tests
